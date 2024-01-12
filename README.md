@@ -1,6 +1,8 @@
 # glotovvladimir_infra
 glotovvladimir Infra repository
 
+ДЗ 3 Знакомство с облачной инфраструктурой и облачными сервисами:
+
 bastion_IP = 158.160.114.107
 someinternalhost_IP = 10.128.0.35
 
@@ -13,3 +15,20 @@ someinternalhost_IP = 10.128.0.35
 `ssh_someinternalhost`
 
 Для подключения с использованием vpn поднят pritunl сервер на bastion машине, проверялось через подключение с виртуальной Ubuntu 20.04
+
+Для подключения с использованием vpn поднят pritunl сервер на bastion машине, проверялось через подключение с виртуальной Ubuntu 20.04
+
+ДЗ 4 Основные сервисы Yandex Cloud:
+
+testapp_IP = 158.160.136.11
+testapp_port = 9292
+
+Скрипт для создания ВМ через YC CLI:
+`yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-d,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --metadata-from-file user-data=user_data.yaml`
