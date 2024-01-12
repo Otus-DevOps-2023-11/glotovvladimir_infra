@@ -32,3 +32,4 @@ testapp_port = 9292
   --network-interface subnet-name=default-ru-central1-d,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=user_data.yaml`
+  
