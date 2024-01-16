@@ -15,12 +15,12 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "/home/home/homework5/install_ruby.sh",
+      "script": "./scripts/install_ruby.sh",
       "execute_command": "{{.Vars}} sudo -S -E sh -eux '{{.Path}}'"
     },
     {
       "type": "shell",
-      "script": "/home/home/homework5/install_mongodb.sh",
+      "script": "./scripts/install_mongodb.sh",
       "execute_command": "{{.Vars}} sudo -S -E sh -eux '{{.Path}}'"
     }
   ]
