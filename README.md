@@ -1,7 +1,7 @@
 # glotovvladimir_infra
 glotovvladimir Infra repository
 
-ДЗ 3 Знакомство с облачной инфраструктурой и облачными сервисами:
+### ДЗ 3: Знакомство с облачной инфраструктурой и облачными сервисами:
 
 bastion_IP = 158.160.114.107
 someinternalhost_IP = 10.128.0.35
@@ -18,7 +18,7 @@ someinternalhost_IP = 10.128.0.35
 
 Для подключения с использованием vpn поднят pritunl сервер на bastion машине, проверялось через подключение с виртуальной Ubuntu 20.04
 
-ДЗ 4 Основные сервисы Yandex Cloud:
+### ДЗ 4: Основные сервисы Yandex Cloud:
 
 testapp_IP = 158.160.136.11
 testapp_port = 9292
@@ -32,4 +32,13 @@ testapp_port = 9292
   --network-interface subnet-name=default-ru-central1-d,nat-ip-version=ipv4 \
   --metadata serial-port-enable=1 \
   --metadata-from-file user-data=user_data.yaml`
+
+### ДЗ 5: Модели управления инфраструктурой. Подготовка образов с помощью Packer:
+
+Создан скрипт для создания образа ВМ с установленными ruby и mongodb
+
+Запускается скриптом:
+`packer build -var-file variables.json ubuntu16.json`
+
+Проверено по логам, что пакеты устанавливаются, после проверена работоспособность приложения после стягивания кода и его запуска
   
