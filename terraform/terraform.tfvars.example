@@ -1,8 +1,8 @@
 cloud_id                 = "b1go4grtf4afrc1234ffv"
-folder_id                = "b1gd75thuf6nsoddvf43
+folder_id                = "b1gd75thuf6nsoddvf43"
 image_id                 = "fd8cgugun1j3lsdvflst"
 zone                     = "ru-central1-c"
 subnet_id                = "fl8d32ri24didsd2ik2cje"
-public_key_path          = "~/.ssh/yandexkey.pub"
-private_key_path         = "~/.ssh/yandexkey"
+public_key_path          = "/home/.ssh/yandexkey.pub"
+private_key_path         = "/home/.ssh/yandexkey"
 service_account_key_file = "key.json"
