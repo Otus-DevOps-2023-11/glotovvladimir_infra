@@ -6,4 +6,3 @@ subnet_id                = "fl8d32ri24didsd2ik2cje"
 public_key_path          = "~/.ssh/yandexkey.pub"
 private_key_path         = "~/.ssh/yandexkey"
 service_account_key_file = "key.json"
-
