@@ -1,1 +1,6 @@
-packer/variablesSecret.json
+.packer/variablesSecret.json
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
