@@ -1,0 +1,11 @@
+---
+- name: Clone
+  hosts: app
+  tasks:
+    - name: Delete repo
+      command: sudo rm -rf reddit
+    - name: Make dir
+      command: sudo mkdir reddit
+    - name: Clone repo
+      become: true
+      command: git clone https://github.com/express42/reddit.git
