@@ -12,7 +12,7 @@
     dest: /home/ubuntu/db_config
     owner: ubuntu
     group: ubuntu
-    
+
 #- name: enable puma
 #  systemd: name=puma enabled=yes
   
