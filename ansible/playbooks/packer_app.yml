@@ -1,0 +1,29 @@
+---
+- name: Install Ruby && Bundler
+  hosts: all
+  become: true
+  tasks:
+  - name: Delete all locks1
+    command: sudo rm -f /var/lib/apt/lists/lock
+    
+  - name: Wait 10
+    command: sleep 10
+    
+  - name: Delete all locks2
+    command: rm -f /var/cache/apt/archives/lock
+    
+  - name: Wait 20
+    command: sleep 20
+    
+  - name: Delete all locks3
+    command: rm -f /var/lib/dpkg/lock*
+    
+  - name: Configure
+    command: sudo dpkg --configure -a
+    
+  - name: Install ruby and rubygems and required packages
+    apt: "name={{ item }} state=present"
+    with_items:
+      - ruby-full
+      - ruby-bundler
+      - build-essential
