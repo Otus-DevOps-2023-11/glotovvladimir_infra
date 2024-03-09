@@ -7,7 +7,7 @@
         state: present
         chdir: /home/ubuntu/reddit
       notify: restart puma
-      
+
   handlers:
     - name: restart puma
       systemd: name=puma state=restarted
